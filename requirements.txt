@@ -1,0 +1,4 @@
+
+factorio-rcon-py==2.0.1
+dynaconf==3.1.7
+prometheus-client==0.12.0
