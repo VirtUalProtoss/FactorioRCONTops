@@ -18,14 +18,13 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "liveNow": true,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -104,9 +103,9 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+            "uid": "P1809F7CD0C75ACF3"
           },
-          "editorMode": "code",
+          "editorMode": "builder",
           "expr": "factorio_top_builders",
           "legendFormat": "{{nickname}}",
           "range": true,
@@ -119,7 +118,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -198,9 +197,9 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+            "uid": "P1809F7CD0C75ACF3"
           },
-          "editorMode": "code",
+          "editorMode": "builder",
           "expr": "factorio_top_runners",
           "legendFormat": "{{nickname}}",
           "range": true,
@@ -213,7 +212,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -292,9 +291,9 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+            "uid": "P1809F7CD0C75ACF3"
           },
-          "editorMode": "code",
+          "editorMode": "builder",
           "expr": "factorio_top_crafters",
           "legendFormat": "{{nickname}}",
           "range": true,
@@ -307,7 +306,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+        "uid": "P1809F7CD0C75ACF3"
       },
       "description": "",
       "fieldConfig": {
@@ -386,9 +385,9 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "b0a46cd4-7f81-4b22-a0a0-755b1a2df3ae"
+            "uid": "P1809F7CD0C75ACF3"
           },
-          "editorMode": "code",
+          "editorMode": "builder",
           "expr": "factorio_top_tree_haters",
           "legendFormat": "{{nickname}}",
           "range": true,
@@ -427,6 +426,6 @@
   "timezone": "",
   "title": "Factorio Tops",
   "uid": "ef56aaf6-39e0-4b95-80b5-97c20e786295",
-  "version": 4,
+  "version": 1,
   "weekStart": ""
 }

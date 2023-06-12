@@ -39,7 +39,7 @@ services:
   factorio_rcon:
     build: .
     environment:
-      RCON_ADDR: "127.0.0.1"
-      RCON_PORT: 27015
-      RCON_PASS: "123"
+      RCON_ADDR: "${RCON_ADDR:-127.0.0.1}"
+      RCON_PORT: "${RCON_PORT:-27015}"
+      RCON_PASS: "${RCON_PASS:-123}"
 
