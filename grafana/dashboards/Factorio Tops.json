@@ -268,6 +268,145 @@
         "type": "prometheus",
         "uid": "P1809F7CD0C75ACF3"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 13
+      },
+      "id": 6,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "place\\top_category"
+          }
+        ]
+      },
+      "pluginVersion": "9.5.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "P1809F7CD0C75ACF3"
+          },
+          "editorMode": "builder",
+          "exemplar": false,
+          "expr": "factorio_top",
+          "format": "table",
+          "instant": true,
+          "legendFormat": "__auto",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Top One",
+      "transformations": [
+        {
+          "id": "labelsToFields",
+          "options": {
+            "keepLabels": [
+              "__name__",
+              "place",
+              "top_category",
+              "nickname"
+            ],
+            "mode": "columns",
+            "valueLabel": "nickname"
+          }
+        },
+        {
+          "id": "joinByField",
+          "options": {
+            "byField": "top_category",
+            "mode": "outer"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true,
+              "__name__": true,
+              "instance": true,
+              "job": true
+            },
+            "indexByName": {},
+            "renameByName": {}
+          }
+        },
+        {
+          "id": "groupingToMatrix",
+          "options": {
+            "columnField": "place",
+            "emptyValue": "null",
+            "rowField": "top_category",
+            "valueField": "nickname"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 4,
+              "5": 5,
+              "6": 6,
+              "7": 7,
+              "8": 8,
+              "9": 9,
+              "10": 10,
+              "top_category\\place": 0
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "P1809F7CD0C75ACF3"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -292,7 +431,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 26
       },
       "id": 1,
       "options": {
@@ -390,7 +529,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 26
       },
       "id": 2,
       "options": {
@@ -484,7 +623,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 21
+        "y": 34
       },
       "id": 4,
       "options": {
@@ -578,7 +717,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 21
+        "y": 34
       },
       "id": 3,
       "options": {
@@ -638,6 +777,6 @@
   "timezone": "",
   "title": "Factorio Tops",
   "uid": "ef56aaf6-39e0-4b95-80b5-97c20e786295",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }

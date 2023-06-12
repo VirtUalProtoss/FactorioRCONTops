@@ -20,11 +20,12 @@ def get_tops(client):
                     "place": el.split(". ")[0],
                     "nickname": el.split(". ")[1].split(" - ")[0],
                     "value": el.split(". ")[1].split(" - ")[1],
+                    "top_category": metric_name,
                 }
                 top_data.append(place_data)
             metrics_data.append({
                 "description": top[1],
                 "data": top_data,
-                "name": "factorio_top_" + metric_name,
+                "name": "factorio_top",
             })
     return metrics_data

@@ -35,12 +35,13 @@ class Metrics():
                 self.gauges[metric_name] = Gauge(
                     metric_name,
                     top["description"],
-                    ["nickname", "place"]
+                    ["nickname", "place", "top_category"]
                 )
             for row in metric_data:
                 self.gauges[metric_name].labels(
                     row["nickname"],
                     row["place"],
+                    row["top_category"],
                 ).set(row["value"])
 
     def refresh_metrics(self):
